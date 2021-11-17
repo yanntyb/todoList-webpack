@@ -1,0 +1,50 @@
+#utils{
+    position:absolute;
+    right: 0;
+    top: 0;
+    height:100%;
+    padding: 2%;
+    box-shadow: 0px 0px 17px 2px #95d6b7;
+}
+
+#utils h1 {
+    margin-bottom: 4%;
+}
+
+#utils input {
+    padding: 5px;
+    font-size: 16px;
+    border-width: 1px;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-style: solid;
+    border-color: green;
+    border-radius: 11px;
+
+}
+
+#utils input[type=text]{
+    width: 60%;
+}
+
+#utils input[type=submit]{
+    width: 30%;
+    background-color: #F5F5F5;
+}
+
+#utils input[type=submit]:hover{
+    cursor: pointer;
+}
+
+#utils input:focus {
+    outline:none;
+}
+
+#utils .liste-title-utils{
+    width: 100%;
+}
+
+#utils #utils-list{
+    height: 100%;
+    width: 100%;
+}
