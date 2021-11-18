@@ -12,7 +12,6 @@ const main = document.querySelector("#main");
 /**
  * Create liste according to localStorage data
  */
-
 if(localStorage.getItem("listes")){
     let listes = JSON.parse(localStorage.getItem("listes"))
     for(let indexListe of Object.keys(listes)){

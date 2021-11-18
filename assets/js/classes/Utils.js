@@ -39,6 +39,9 @@ class Utils{
                 const localStorageListes = JSON.parse(localStorage.getItem("listes"));
                 let newId;
                 if(localStorageListes !== null){
+                    /**
+                     * When there is only one liste and its removed it let the local storage with {} so newId need to be 0 in this case
+                     */
                     if(!_.isEmpty(localStorageListes)){
                         const id_liste = Object.keys(localStorageListes);
                         newId = parseInt(id_liste[id_liste.length - 1]) + 1;
@@ -95,6 +98,10 @@ class Utils{
         }
     }
 
+    /**
+     * Animate div
+     * @param div
+     */
     animateDiv(div){
         div.style.zIndex = "10";
         div.style.animationName = "focus";
@@ -109,6 +116,9 @@ class Utils{
         div.style.animationName = "";
     }
 
+    /**
+     * Set zIndex to be in first plan
+     */
     zIndex() {
         document.addEventListener("click", (e) => {
             let targetElement = e.target;
