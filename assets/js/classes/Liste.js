@@ -69,7 +69,7 @@ class Liste{
      * define Dom and event
      */
     createDom(){
-        this.parent.prepend(this.div);
+        this.parent.append(this.div);
         this.div.className = "liste";
         this.div.id = "liste-" + this.id;
         this.div.innerHTML =
@@ -119,7 +119,7 @@ class Liste{
 
         const remove = this.div.querySelector(".remove");
         remove.addEventListener("click", () => {
-            document.body.removeChild(this.div);
+            this.parent.removeChild(this.div);
             let currentStorage = JSON.parse(localStorage.getItem("listes"));
             delete currentStorage[this.id];
             localStorage.setItem("listes", JSON.stringify(currentStorage));
@@ -137,14 +137,6 @@ class Liste{
                 if (targetElement === (this.div)) {
                     this.div.style.zIndex = "10";
                     return;
-                }
-                else{
-                    console.log(targetElement);
-                    //TODO FIX HERE
-                    if(targetElement === (document.querySelector("#utils") || document.querySelector("#main"))){
-                        console.log("ok");
-                        return;
-                    }
                 }
                 targetElement = targetElement.parentNode;
             } while (targetElement);

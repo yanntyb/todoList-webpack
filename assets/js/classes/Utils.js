@@ -54,7 +54,7 @@ class Utils{
                 new Liste(name.value, newId, {
                     top: randomInteger(0, 50) + "%",
                     left: randomInteger(0, 30) + "%"
-                });
+                },document.querySelector("#main"));
                 this.updateListDisplay();
                 name.value = "";
             }
